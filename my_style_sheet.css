@@ -1,5 +1,5 @@
 body {
-    min-width:700px;
+    min-width: 700px;
 }
 
 .nav-menu {
@@ -25,15 +25,13 @@ body {
     width: 120px;
 }
 
-
-
-#banner{
+#banner {
     margin: 0pt;
     padding: 100pt;
     background-color: #6A6AC4;
 }
 
-#sub_banner{
+#sub_banner {
     margin: 0pt;
     padding: 5pt;
     background-color: #f5f5f5;
@@ -54,12 +52,10 @@ ul, ol {
     list-style-type: none;
 }
 
-
 li.hr_l {
     float: right;
     padding: 5pt;
 }
-
 
 li.hr_left {
     float: left;
@@ -85,6 +81,7 @@ a.button-main {
     border: 0;
 
 }
+
 #button-register {
     background: #00c8aa;
     color: #FFFFFF;
@@ -135,6 +132,7 @@ li a {
     text-decoration: none;
 
 }
+
 a.li_a_hd {
     color: black;
 }
@@ -152,11 +150,11 @@ a.li_a_ft:hover {
 }
 
 .button-main:hover {
-    transform:scale(1.2,1.1);
+    transform: scale(1.2, 1.1);
 }
 
 #user:hover {
-    transform:scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 
 }
 
@@ -198,7 +196,6 @@ img.fiber {
     justify-content: center;
 }
 
-
 .footer {
     text-align: center;
     padding: 3px;
@@ -206,8 +203,7 @@ img.fiber {
     color: white;
 }
 
-
-.analyse_banner{
+.analyse_banner {
     padding-top: 200px;
     background-color: white;
     text-align: center;
