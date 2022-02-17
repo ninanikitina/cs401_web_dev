@@ -1,0 +1,252 @@
+body {
+    min-width:700px;
+}
+
+.nav-menu {
+    margin: 0;
+    padding: 0pt;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#logo {
+    width: 40px;
+}
+
+#user {
+    width: 50px;
+}
+
+#logo_text {
+    width: 120px;
+}
+
+
+
+#banner{
+    margin: 0pt;
+    padding: 100pt;
+    background-color: #6A6AC4;
+}
+
+#sub_banner{
+    margin: 0pt;
+    padding: 5pt;
+    background-color: #f5f5f5;
+    text-align: center;
+    color: dimgrey;
+    font-family: Fira Sans, serif;
+}
+
+#two_bottons {
+    margin: auto;
+    padding: 0pt;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+
+li.hr_l {
+    float: right;
+    padding: 5pt;
+}
+
+
+li.hr_left {
+    float: left;
+}
+
+a.button-main {
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+
+}
+#button-register {
+    background: #00c8aa;
+    color: #FFFFFF;
+}
+
+#button-sign-in {
+    background: grey;
+    color: white;
+}
+
+#button-quantify {
+    margin-top: 50px;
+    background: #00c8aa;
+    color: #FFFFFF;
+}
+
+.button-analyse-cell {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 1px solid #1d1c1d4d;
+    font-weight: 700;
+    background: #fff;
+    padding: 0 12px 1px;
+    font-size: 15px;
+    border-radius: 4px;
+    color: rgb(29, 28, 29);
+    height: 36px;
+    transition: all 80ms linear;
+}
+
+a.button-square-green {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 300;
+    background: #00c8aa;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 4px;
+    color: white;
+}
+
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+a.li_a_hd {
+    color: black;
+}
+
+a.li_a_hd:hover {
+    color: #00c8aa;
+}
+
+a.li_a_ft {
+    color: white;
+}
+
+a.li_a_ft:hover {
+    color: #00c8aa;
+}
+
+.button-main:hover {
+    transform:scale(1.2,1.1);
+}
+
+#user:hover {
+    transform:scale(1.2,1.2);
+
+}
+
+img.cell {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+}
+
+img.fiber {
+    width: 300px;
+}
+
+.responsive {
+    height: auto;
+    width: 90%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_fibers {
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+
+.analyse_banner{
+    padding-top: 200px;
+    background-color: white;
+    text-align: center;
+    color: dimgrey;
+    font-family: Fira Sans, serif;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form {
+    width: 500px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+
+.holder {
+    height: 700pt;
+}
