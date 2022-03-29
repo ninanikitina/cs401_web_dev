@@ -4,17 +4,17 @@
 require_once 'KLogger.php';
 class Dao {
 
-    private $logger = null;
-    private $host = "localhost";
-    private $db = "afilament";
-    private $user = "afilament";
-    private $pass = "BoiseState123!";
-
 //    private $logger = null;
-//    private $host = "us-cdbr-east-05.cleardb.net";
-//    private $db = "heroku_715721257573706";
-//    private $user = "b2123b4f7db64f";
-//    private $pass = "17e40ade";
+//    private $host = "localhost";
+//    private $db = "afilament";
+//    private $user = "afilament";
+//    private $pass = "BoiseState123!";
+
+    private $logger = null;
+    private $host = "us-cdbr-east-05.cleardb.net";
+    private $db = "heroku_715721257573706";
+    private $user = "b2123b4f7db64f";
+    private $pass = "17e40ade";
 
     public function __construct() {
         $this->logger = new KLogger ( "log.txt" , KLogger::WARN );
