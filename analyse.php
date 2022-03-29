@@ -5,7 +5,10 @@ if (isset($_SESSION['message'])) {
     $messages = $_SESSION['message'];
     unset($_SESSION['message']);
 }
-
+if (!isset($_SESSION['signed_user'])) {
+    header('Location: sign_in.php');
+    exit;
+}
 require_once 'Dao.php';
 $dao = new Dao();
 
@@ -61,9 +64,10 @@ function getUserInput ($lookup) {
               <input type="text" id="y_resolution" name="y" value="<?php echo getUserInput('y'); ?>" placeholder="...">
               <label for="z_resolution">Z resolution, µm per pixel</label>
               <input type="text" id="z_resolution" name="z" value="<?php echo getUserInput('z'); ?>" placeholder="...">
-              <p>Upload an image (lif file):</p>
+              <p>Upload an image (png, jpg):</p>
               <input class="button-square-green" type="file" id="myfile" name="myfile" />
               <input type="submit" value="Submit">
+              <p>The program works in simulation mode. All statistics are randomly created to demonstrate forms functionality</p>
           </form>
   </div></div>
 

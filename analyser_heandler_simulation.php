@@ -55,7 +55,7 @@ if (isset($_SESSION['message'])) {
     exit;
 }
 $_SESSION['sentiment'] = 'good';
-$_SESSION['message'][] = "Your cells is processing now!";
+$_SESSION['message'][] = "Your cell has been processed now!";
 
 unset($_SESSION['post']);
 
@@ -65,11 +65,29 @@ foreach ($added_cell as $cell) {
     $cell_id = $cell['cell_id'];
 }
 
+#Create simulation of cell statistics
+
+$total_fiber_num = rand(50, 200);
+$nucleus_volume = rand(150, 5000);
+$total_fiber_volume = rand(3, 50);
+$total_fiber_length = $total_fiber_volume / 0.07;
+
+
 #Create simulations of actin statistics in csv file
 $list = array(
     array("ID", "Actin Length", "Actin Xsection", "Actin Volume", "Number of fiber layers"),
-    array(111, 20.8811, 0.552146314, 11.5294224, 356)
 );
+$stack = array("orange", "banana");
+array_push($stack, "apple", "raspberry");
+
+
+
+for ($x = 0; $x < $total_fiber_num; $x++) {
+    $stack = array(rand(50, 150), rand(5, 50) + rand(50, 1000)/1000, rand(50, 1000)/1000, rand(5, 80) + rand(50, 1000)/1000, rand(150, 300));
+    array_push($list, $stack);
+}
+
+
 $baseStatPath = "stat/";
 $statPath = uniqid() . ".csv";
 $actin_stat_path = $baseStatPath . $statPath;
@@ -78,13 +96,6 @@ foreach ($list as $line) {
     fputcsv($file, $line);
 }
 fclose($file);
-
-#Create simulation of cell statistics
-$nucleus_volume = rand(150, 5000);
-$total_fiber_num = rand(50, 200);
-$total_fiber_volume = rand(10, 100);
-$total_fiber_length = $total_fiber_volume / 0.01;
-
 
 $dao->addCellAnalytics($cell_id, $nucleus_volume, $total_fiber_num, $total_fiber_volume, $total_fiber_length, $actin_stat_path);
 header('Location: user_accaunt.php');

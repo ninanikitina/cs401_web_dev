@@ -36,16 +36,22 @@ if (isset($_SESSION['message'])) {
     $messages = $_SESSION['message'];
     unset($_SESSION['message']);
 }
-foreach ($messages as $message) {
-    echo $message;
+
+if (!isset($_SESSION['signed_user'])) {
+    header('Location: sign_in.php');
+    exit;
 }
+
+foreach ($messages as $message) {
+    echo "<div id='sub_banner'><h2>".$message."</h2></div>";
+}
+$messages = Null;
 
 if ($cells->rowCount() == 0) {
     echo "<div id='sub_banner'><h2>You have not analyzed any fibers yet. To run your first analysis, please push Quntify Fibers.</h2></div>>";
-
 }
 else {
-    echo "<div id='sub_banner'><h2>Previous analysis</h2></div>";
+    echo "<div id='sub_banner'><h2>Analysis results</h2></div>";
     echo "<div class='container_table'>";
     echo "<table>";
     echo "<tr>
@@ -61,10 +67,10 @@ else {
         echo "<tr>";
         echo "<td>" . $cell["created_at"] . "</td>";
         echo "<td>" . htmlspecialchars($cell["img_original_name"]) . "</td>";
-        echo "<td>" . $cell["nucleus_volume"] . "</td>";
-        echo "<td>" . $cell["total_fiber_num"] . "</td>";
-        echo "<td>" . $cell["total_fiber_volume"] . "</td>";
-        echo "<td>" . $cell["total_fiber_length"] . "</td>";
+        echo "<td>" . (int)$cell["nucleus_volume"] . "</td>";
+        echo "<td>" . (int)$cell["total_fiber_num"] . "</td>";
+        echo "<td>" . (int)$cell["total_fiber_volume"] . "</td>";
+        echo "<td>" . (int)$cell["total_fiber_length"] . "</td>";
         echo "<td> <a href=" . $cell["actin_stat_path"] . " download'>Download</a></td>";
         echo "</tr>";
     }

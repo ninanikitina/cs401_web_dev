@@ -1,6 +1,6 @@
 <?php
 session_start();
-$email = $_SESSION['signed_user'] ;
+$email = $_SESSION['signed_user'];
 ?>
 <div class="nav-menu">
       <ul >

@@ -78,7 +78,7 @@ $actin_stat_path = $baseStatPath . $statPath;
 #call pyton program that returns the data:
 $arguments= $confocal_img." ".$x." ".$y." ".$z." ".$nuc_channel." ".$actin_channel." ".$actin_stat_path;
 //$command = escapeshellcmd("C:\Users\nnina\miniconda3\condabin\activate.bat pytorch-conda-env && python D:\BioLab\src\test_script_for_web_site.py '$input'");
-$output = shell_exec('C:\Users\nnina\miniconda3\condabin\activate.bat pytorch-conda-env && python D:\BioLab\src\test_script_for_web_site.py ".$arguments"');
+$output = shell_exec('C:\Users\nnina\miniconda3\condabin\activate.bat pytorch-conda-env && python D:\BioLab\src\analyze_cell_web_site.py C:\Users\nnina\Desktop\image_web_site.lif 0.05882 0.05882 0.270 0 1 "actin_stat.csv"');
 $_SESSION['message'][] = $output;
 
 //$dao->addCellAnalytics($cell_id, $nucleus_volume, $total_fiber_num, $total_fiber_volume, $total_fiber_length, $actin_stat_path);

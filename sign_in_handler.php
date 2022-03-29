@@ -38,6 +38,9 @@ if (isset($_SESSION['message'])) {
     exit;
 }
 
+$_SESSION['sentiment'] = 'good';
+$_SESSION['message'][] = "Welcome back!";
+
 unset($_SESSION['post']);
 $_SESSION['signed_user'] = $email;
 header('Location: user_accaunt.php');
